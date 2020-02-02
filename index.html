@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animation</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      svg{
+          animation: svg-scale 3s linear forwards 3.7s, notvisible 0.4s ease-in-out forwards 6.7s;
+      }
+
+      svg path:nth-child(1){
+          stroke-dasharray: 462;
+          stroke-dashoffset: 462;
+          animation: stroke-animate 2s forwards, stroke-fill 0.6s forwards 3.7s;
+        }
+        svg path:nth-child(2){
+            stroke-dasharray: 565;
+            stroke-dashoffset: 565;
+            animation: stroke-animate 2s forwards 0.3s, stroke-fill 0.6s forwards 3.7s;
+        }
+        svg path:nth-child(3){
+            stroke-dasharray: 216;
+            stroke-dashoffset: 216;
+            animation: stroke-animate 2s forwards 0.6s, stroke-fill 0.6s forwards 3.7s;
+        }
+        svg path:nth-child(4){
+            stroke-dasharray: 747;
+            stroke-dashoffset: 747;
+            animation: stroke-animate 2s forwards 0.9s, stroke-fill 0.6s forwards 3.7s;
+        }
+        svg path:nth-child(5){
+            stroke-dasharray: 462;
+            stroke-dashoffset: 462;
+            animation: stroke-animate 2s forwards 1.2s, stroke-fill 0.6s forwards 3.7s;
+        }
+        svg path:nth-child(6){
+            stroke-dasharray: 339;
+            stroke-dashoffset: 339;
+            animation: stroke-animate 2s forwards 1.5s, stroke-fill 0.6s forwards 3.7s;
+        }
+        svg path:nth-child(7){
+            stroke-dasharray: 216;
+            stroke-dashoffset: 216;
+            animation: stroke-animate 2s forwards 1.8s, stroke-fill 0.6s forwards 3.7s;
+        }
+        svg path:nth-child(8){
+            stroke-dasharray: 492;
+            stroke-dashoffset: 492;
+            animation: stroke-animate 2s forwards 2.1s, stroke-fill 0.6s forwards 3.7s;
+        }
+        svg path:nth-child(9){
+            stroke-dasharray: 565;
+            stroke-dashoffset: 565;
+            animation: stroke-animate 2s forwards 2.4s, stroke-fill 0.6s forwards 3.7s;
+      }
+
+      @keyframes stroke-animate{
+          to{
+            stroke-dashoffset: 0;
+          }
+      }
+
+      @keyframes stroke-fill{
+        from{
+            fill: transparent;
+        }
+        to{
+            fill: white;
+        }
+    }
+
+    @keyframes svg-scale{
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes notvisible{
+        from{
+            opacity: 1;
+            display: block;
+        }
+        to{
+            opacity: 0;
+            display: none;
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <svg width="710" height="98" viewBox="0 0 710 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M62.0446 71.7968H21.9946L12.9998 96.6898H0L36.5045 1.31016H47.5347L84.1049 96.6898H71.1707L62.0446 71.7968ZM25.8027 61.4465H58.3022L42.0196 16.8356L25.8027 61.4465Z" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M170.442 96.6898H157.77L109.645 23.1898V96.6898H96.9734V1.31016H109.645L157.902 75.1377V1.31016H170.442V96.6898Z" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M206.356 96.6898H193.75V1.31016H206.356V96.6898Z" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M245.749 1.31016L277.001 79.1337L308.253 1.31016H324.601V96.6898H311.996V59.5468L313.177 19.4559L281.794 96.6898H272.143L240.825 19.6524L242.072 59.5468V96.6898H229.466V1.31016H245.749Z" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M400.828 71.7968H360.778L351.783 96.6898H338.783L375.288 1.31016H386.318L422.888 96.6898H409.954L400.828 71.7968ZM364.586 61.4465H397.085L380.803 16.8356L364.586 61.4465Z" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M493.271 11.6604H462.544V96.6898H450.004V11.6604H419.343V1.31016H493.271V11.6604Z" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M520.977 96.6898H508.372V1.31016H520.977V96.6898Z" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M617.623 52.0789C617.623 61.4247 616.047 69.5914 612.895 76.5789C609.744 83.5227 605.279 88.8289 599.502 92.4973C593.724 96.1658 586.983 98 579.28 98C571.751 98 565.076 96.1658 559.255 92.4973C553.433 88.7852 548.903 83.5227 545.664 76.7099C542.469 69.8534 540.827 61.9269 540.74 52.9305V46.0521C540.74 36.881 542.337 28.7799 545.533 21.7487C548.728 14.7175 553.236 9.34581 559.058 5.63369C564.923 1.8779 571.62 0 579.148 0C586.808 0 593.549 1.85606 599.37 5.56818C605.235 9.23663 609.744 14.5865 612.895 21.6176C616.047 28.6052 617.623 36.75 617.623 46.0521V52.0789ZM605.082 45.9211C605.082 34.6101 602.806 25.9412 598.254 19.9144C593.702 13.844 587.333 10.8088 579.148 10.8088C571.182 10.8088 564.901 13.844 560.305 19.9144C555.753 25.9412 553.411 34.3262 553.28 45.0695V52.0789C553.28 63.0406 555.578 71.6658 560.174 77.9545C564.814 84.1996 571.182 87.3222 579.28 87.3222C587.421 87.3222 593.724 84.3743 598.188 78.4786C602.653 72.5392 604.951 64.045 605.082 52.996V45.9211Z" fill="none" stroke="white" stroke-width="2"/>
+        <path d="M710 96.6898H697.328L649.203 23.1898V96.6898H636.531V1.31016H649.203L697.46 75.1377V1.31016H710V96.6898Z" fill="none" stroke="white" stroke-width="2"/>
+    </svg>
+</html>
